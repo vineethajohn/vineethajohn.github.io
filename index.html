@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vineetha John — Educator | NET · SET · KTET Qualified</title>
+<meta name="description" content="Vineetha John — Qualified Educator, Malayalam Language & Literature. NET · SET · KTET · MA · BEd. Teaching experience in UAE and India.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf8f4;
+  --dark:#1a1208;
+  --brown:#5c3d1e;
+  --gold:#c4922a;
+  --cream:#f0e9d6;
+  --sage:#4a6741;
+  --muted:#8a7a6a;
+  --white:#ffffff;
+  --border:#e0d5c0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--dark);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+
+/* TEXTURE */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23faf8f4'/%3E%3Crect width='1' height='1' fill='%23f0e9d6' opacity='.4'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.6}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+
+/* LANG TOGGLE */
+.lang-bar{background:var(--dark);padding:10px 0;text-align:right}
+.lang-bar .wrap{display:flex;justify-content:flex-end;gap:12px;align-items:center}
+.lang-btn{background:none;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:2px;padding:4px 12px;border-radius:2px;cursor:pointer;transition:all .2s;text-transform:uppercase}
+.lang-btn.active,.lang-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--white)}
+
+/* HERO */
+.hero{padding:64px 0 0;display:grid;grid-template-columns:1fr 340px;gap:0;align-items:end}
+@media(max-width:680px){.hero{grid-template-columns:1fr;}.hero-photo{display:flex;justify-content:center;margin-top:32px}}
+.hero-text{padding-bottom:48px}
+.hero-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:4px;margin-bottom:24px}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,80px);font-weight:300;line-height:.95;color:var(--dark);margin-bottom:8px}
+.hero-name em{font-style:italic;color:var(--brown)}
+.hero-title{font-size:14px;color:var(--muted);letter-spacing:.5px;margin-bottom:32px;font-weight:400}
+.hero-title span{color:var(--sage);font-weight:500}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;padding:5px 12px;border-radius:2px;text-transform:uppercase;font-weight:500}
+.badge-gold{background:var(--gold);color:var(--white)}
+.badge-sage{background:var(--sage);color:var(--white)}
+.badge-outline{background:transparent;border:1px solid var(--border);color:var(--muted)}
+.hero-contact{display:flex;gap:16px;flex-wrap:wrap}
+.contact-link{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:.5px;transition:color .2s;display:flex;align-items:center;gap:6px}
+.contact-link:hover{color:var(--gold)}
+
+/* PHOTO */
+.hero-photo{position:relative}
+.photo-frame{width:280px;height:340px;margin-left:auto;position:relative}
+.photo-frame::before{content:'';position:absolute;top:12px;left:12px;right:-12px;bottom:-12px;border:2px solid var(--gold);border-radius:2px;z-index:0}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:2px;position:relative;z-index:1;filter:sepia(8%) contrast(1.05)}
+
+/* DIVIDER */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:48px 0}
+
+/* SECTION */
+.section{margin-bottom:56px}
+.section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.section-title-ml{font-family:'DM Sans',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;font-style:italic}
+
+/* ABOUT */
+.about-text{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;line-height:1.7;color:var(--brown);max-width:680px}
+.about-text-ml{font-size:16px;color:var(--muted);line-height:1.8;margin-top:16px;font-style:italic}
+
+/* QUALS GRID */
+.quals-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:560px){.quals-grid{grid-template-columns:1fr}}
+.qual-card{padding:20px 22px;border:1px solid var(--border);border-radius:4px;background:var(--white);transition:border-color .2s,transform .2s;position:relative;overflow:hidden}
+.qual-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold)}
+.qual-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.qual-card.highlight::before{background:var(--sage)}
+.qual-year{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:6px}
+.qual-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--dark);margin-bottom:4px}
+.qual-detail{font-size:12px;color:var(--muted)}
+.qual-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;padding:2px 8px;border-radius:1px;margin-top:6px;text-transform:uppercase;letter-spacing:1px}
+.qb-gold{background:rgba(196,146,42,.12);color:var(--gold);border:1px solid rgba(196,146,42,.3)}
+.qb-sage{background:rgba(74,103,65,.1);color:var(--sage);border:1px solid rgba(74,103,65,.2)}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column;gap:0}
+.exp-item{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--border)}
+.exp-item:last-child{border-bottom:none}
+@media(max-width:560px){.exp-item{grid-template-columns:1fr;gap:8px}}
+.exp-period{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.5px;padding-top:3px}
+.exp-role{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--dark);margin-bottom:2px}
+.exp-org{font-size:13px;color:var(--gold);font-weight:500;margin-bottom:8px}
+.exp-loc{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:.5px;margin-bottom:10px}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:4px}
+.exp-bullets li{font-size:13px;color:var(--muted);padding-right:8px;position:relative;padding-left:14px}
+.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:11px}
+
+/* AWARDS */
+.awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(max-width:560px){.awards-grid{grid-template-columns:1fr}}
+.award{padding:14px 16px;background:var(--cream);border-radius:3px;border-left:2px solid var(--gold)}
+.award-text{font-size:13px;color:var(--brown);line-height:1.5}
+
+/* CERTS */
+.certs-row{display:flex;flex-wrap:wrap;gap:8px}
+.cert{padding:8px 14px;border:1px solid var(--border);border-radius:3px;font-size:12px;color:var(--muted);background:var(--white);display:flex;align-items:center;gap:6px}
+.cert span{color:var(--sage)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-top:48px}
+.footer-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--brown);font-style:italic}
+.footer-copy{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero{animation:fadeUp .7s ease both}
+.section{animation:fadeUp .6s .2s ease both}
+
+/* LANGUAGE TOGGLE */
+.ml-text{display:none}
+.en-text{display:block}
+body.ml-mode .ml-text{display:block}
+body.ml-mode .en-text{display:none}
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <div class="wrap">
+    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLang('ml')" id="btn-ml">മലയാളം</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-tag en-text">Educator · Researcher · Academic</div>
+      <div class="hero-tag ml-text">അധ്യാപിക · ഗവേഷക · അക്കാദമിക്</div>
+      <h1 class="hero-name">Vineetha<br><em>Antony</em></h1>
+      <p class="hero-title en-text">Malayalam Language & Literature · <span>NET · SET · KTET Qualified</span></p>
+      <p class="hero-title ml-text">മലയാളം ഭാഷയും സാഹിത്യവും · <span>NET · SET · KTET യോഗ്യത</span></p>
+      <div class="badges">
+        <span class="badge badge-gold">UGC NET 2024</span>
+        <span class="badge badge-sage">SET 2023</span>
+        <span class="badge badge-outline">KTET Cat III</span>
+        <span class="badge badge-outline">MA Malayalam</span>
+        <span class="badge badge-outline">B.Ed First Class</span>
+        <span class="badge badge-gold" style="background:#1B4332">KPSC Selected 2026</span>
+        <span class="badge badge-outline" style="border-color:rgba(196,146,42,.4);color:#c4922a">First Polling Officer KLA 2026</span>
+      </div>
+      <div class="hero-contact">
+        <a href="mailto:vineetha.lida@gmail.com" class="contact-link">✉ vineetha.lida@gmail.com</a>
+        <a href="https://www.linkedin.com/in/vineethajohn" class="contact-link" target="_blank">🔗 linkedin.com/in/vineethajohn</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img src="Vini-PP-Photo.jpg" alt="Vineetha John">
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <div class="section-label en-text">About</div>
+    <div class="section-label ml-text">എന്നെക്കുറിച്ച്</div>
+    <p class="about-text en-text">
+      A dedicated educator and academic with 20+ years of teaching experience across India and UAE. Selected by Kerala Public Service Commission (KPSC) in 2026 for High School Teacher (Malayalam) — Government of Kerala. UGC-NET Qualified (2024) for Assistant Professor and PhD admission. Appointed as First Polling Officer for Kerala Legislative Assembly General Election 2026. Passionate about Malayalam language, literature, and nurturing the next generation of learners.
+    </p>
+    <p class="about-text ml-text">
+      ഇന്ത്യയിലും യുഎഇ-യിലുമായി 20+ വർഷത്തെ അധ്യാപന പരിചയമുള്ള ഒരു സമർപ്പിത അധ്യാപിക. 2026-ൽ കേരള പബ്ലിക് സർവ്വീസ് കമ്മീഷൻ (KPSC) ഹൈസ്കൂൾ ടീച്ചർ (മലയാളം) ആയി തിരഞ്ഞെടുത്തു. UGC-NET യോഗ്യതയുള്ള അസിസ്റ്റന്റ് പ്രൊഫസർ. KLA ജനറൽ ഇലക്ഷൻ 2026 — ഒന്നാം പോളിംഗ് ഓഫീസർ.
+    </p>
+  </div>
+
+  <!-- QUALIFICATIONS -->
+  <div class="section">
+    <div class="section-label en-text">Academic Qualifications</div>
+    <div class="section-label ml-text">അക്കാദമിക് യോഗ്യതകൾ</div>
+    <div class="quals-grid">
+
+      <div class="qual-card highlight">
+        <div class="qual-year">2024</div>
+        <div class="qual-name en-text">UGC — National Eligibility Test</div>
+        <div class="qual-name ml-text">UGC — ദേശീയ യോഗ്യതാ പരീക്ഷ</div>
+        <div class="qual-detail en-text">Qualified for Assistant Professor & PhD Admission</div>
+        <div class="qual-detail ml-text">അസിസ്റ്റന്റ് പ്രൊഫസർ & PhD പ്രവേശനത്തിന് യോഗ്യത</div>
+        <span class="qual-badge qb-sage">NET Qualified</span>
+      </div>
+
+      <div class="qual-card highlight">
+        <div class="qual-year">2021 — 2023</div>
+        <div class="qual-name en-text">Master of Arts</div>
+        <div class="qual-name ml-text">കലാശാസ്ത്ര ബിരുദാനന്തര ബിരുദം</div>
+        <div class="qual-detail en-text">Malayalam Language & Literature — First Class<br>Kerala University</div>
+        <div class="qual-detail ml-text">മലയാളം ഭാഷയും സാഹിത്യവും — ഒന്നാം ക്ലാസ്<br>കേരള സർവ്വകലാശാല</div>
+        <span class="qual-badge qb-gold">First Class</span>
+      </div>
+
+      <div class="qual-card">
+        <div class="qual-year">2023</div>
+        <div class="qual-name en-text">State Eligibility Test</div>
+        <div class="qual-name ml-text">സ്റ്റേറ്റ് എലിജിബിലിറ്റി ടെസ്റ്റ്</div>
+        <div class="qual-detail en-text">Qualified for Higher Secondary Teaching — Kerala</div>
+        <div class="qual-detail ml-text">ഹയർ സെക്കൻഡറി അധ്യാപനത്തിന് യോഗ്യത</div>
+        <span class="qual-badge qb-gold">SET Qualified</span>
+      </div>
+
+      <div class="qual-card">
+        <div class="qual-year">Dec 2020</div>
+        <div class="qual-name en-text">KTET — Category III</div>
+        <div class="qual-name ml-text">KTET — വിഭാഗം III</div>
+        <div class="qual-detail en-text">Qualified for High School Teaching — Kerala</div>
+        <div class="qual-detail ml-text">ഹൈസ്കൂൾ അധ്യാപനത്തിന് യോഗ്യത</div>
+        <span class="qual-badge qb-gold">KTET Qualified</span>
+      </div>
+
+      <div class="qual-card">
+        <div class="qual-year">2009</div>
+        <div class="qual-name en-text">Bachelor of Education</div>
+        <div class="qual-name ml-text">വിദ്യാഭ്യാസ ബിരുദം (B.Ed)</div>
+        <div class="qual-detail en-text">First Class — Kerala University</div>
+        <div class="qual-detail ml-text">ഒന്നാം ക്ലാസ് — കേരള സർവ്വകലാശാല</div>
+        <span class="qual-badge qb-gold">First Class</span>
+      </div>
+
+      <div class="qual-card">
+        <div class="qual-year">2003</div>
+        <div class="qual-name en-text">Bachelor of Arts</div>
+        <div class="qual-name ml-text">കലാ ബിരുദം (BA)</div>
+        <div class="qual-detail en-text">First Class — Kerala University</div>
+        <div class="qual-detail ml-text">ഒന്നാം ക്ലാസ് — കേരള സർവ്വകലാശാല</div>
+        <span class="qual-badge qb-gold">First Class</span>
+      </div>
+
+      <div class="qual-card">
+        <div class="qual-year">1999</div>
+        <div class="qual-name en-text">Trained Teachers Certificate</div>
+        <div class="qual-name ml-text">പരിശീലിത അധ്യാപക സർട്ടിഫിക്കറ്റ് (TTC)</div>
+        <div class="qual-detail en-text">First Class — Kerala University</div>
+        <div class="qual-detail ml-text">ഒന്നാം ക്ലാസ് — കേരള സർവ്വകലാശാല</div>
+        <span class="qual-badge qb-gold">First Class</span>
+      </div>
+
+      <div class="qual-card">
+        <div class="qual-year">1998 / 1996</div>
+        <div class="qual-name en-text">PDC (Plus Two) & SSLC</div>
+        <div class="qual-name ml-text">പ്രീ-ഡിഗ്രി & SSLC</div>
+        <div class="qual-detail en-text">Kerala Board of Education</div>
+        <div class="qual-detail ml-text">കേരള വിദ്യാഭ്യാസ ബോർഡ്</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-label en-text">Teaching Experience</div>
+    <div class="section-label ml-text">അധ്യാപന പരിചയം</div>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-period">Jul 2025<br>Present</div>
+        <div>
+          <div class="exp-role en-text">Teacher — High School</div>
+          <div class="exp-role ml-text">അധ്യാപിക — ഹൈസ്കൂൾ</div>
+          <div class="exp-org">St. John's High School, Eravipuram</div>
+          <div class="exp-loc">Kerala, India</div>
+          <ul class="exp-bullets">
+            <li class="en-text">10th Grade Class Teacher</li>
+            <li class="ml-text">10-ാം ക്ലാസ് ക്ലാസ് ടീച്ചർ</li>
+            <li class="en-text">Student Scholarship Data Entry & Execution</li>
+            <li class="en-text">Environmental Club Leader — Echo Club</li>
+            <li class="en-text">Academic Administration · PSC Exam Invigilation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Sep 2021<br>Jun 2025</div>
+        <div>
+          <div class="exp-role en-text">Teacher — High School</div>
+          <div class="exp-role ml-text">അധ്യാപിക — ഹൈസ്കൂൾ</div>
+          <div class="exp-org">NSM Girls High School, Kottiyam</div>
+          <div class="exp-loc">Kerala, India</div>
+          <ul class="exp-bullets">
+            <li class="en-text">10th Grade Class Teacher · Library In-charge</li>
+            <li class="en-text">Academic Year Documentation</li>
+            <li class="en-text">District-level School Representative</li>
+            <li class="en-text">PSC Exam Invigilation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Jun 2011<br>Sep 2019</div>
+        <div>
+          <div class="exp-role en-text">Administrative Assistant</div>
+          <div class="exp-role ml-text">അഡ്മിനിസ്ട്രേറ്റീവ് അസിസ്റ്റന്റ്</div>
+          <div class="exp-org">Higher Colleges of Technology (HCT) — CERT</div>
+          <div class="exp-loc">Madinat Zayed, UAE 🇦🇪</div>
+          <ul class="exp-bullets">
+            <li class="en-text">IELTS & OET Registration, Procedures & Proctoring</li>
+            <li class="en-text">Essential Food Safety Training Exam Conductor</li>
+            <li class="en-text">WRP & ADCO Exam Proctoring · CEPA Invigilation</li>
+            <li class="en-text">Faculty Assistance & Office Automation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Apr 2010<br>Dec 2010</div>
+        <div>
+          <div class="exp-role en-text">Teacher — Primary</div>
+          <div class="exp-role ml-text">അധ്യാപിക — പ്രൈമറി</div>
+          <div class="exp-org">Bright Riders School</div>
+          <div class="exp-loc">Madinat Zayed, UAE 🇦🇪</div>
+          <ul class="exp-bullets">
+            <li class="en-text">Environmental Science & Work Education</li>
+            <li class="en-text">Green House Mistress — Extracurricular Activities</li>
+            <li class="en-text">Library Activities & Reading Awareness</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Mar 2009<br>Mar 2010</div>
+        <div>
+          <div class="exp-role en-text">Teacher — Primary & Upper Primary</div>
+          <div class="exp-role ml-text">അധ്യാപിക — പ്രൈമറി & അപ്പർ പ്രൈമറി</div>
+          <div class="exp-org">Asian International Higher Secondary School</div>
+          <div class="exp-loc">Madinat Zayed, UAE 🇦🇪</div>
+          <ul class="exp-bullets">
+            <li class="en-text">Environmental Science & Mathematics</li>
+            <li class="en-text">Red House Mistress · Library Activities</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">2001 — 2003</div>
+        <div>
+          <div class="exp-role en-text">Teacher — Primary (Part Time)</div>
+          <div class="exp-role ml-text">അധ്യാപിക — പ്രൈമറി (പാർട്ട് ടൈം)</div>
+          <div class="exp-org">Vijnana Bhavan English Medium Lower Primary School</div>
+          <div class="exp-loc">Kollam, Kerala, India</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AWARDS -->
+  <div class="section">
+    <div class="section-label en-text">Awards & Recognition</div>
+    <div class="section-label ml-text">അവാർഡുകളും അംഗീകാരവും</div>
+    <div class="awards-grid">
+      <div class="award"><div class="award-text en-text">🏆 <strong>Kalathilakom</strong> — Sports & Arts Competition 2007–08 (B.Ed)</div><div class="award-text ml-text">🏆 <strong>കലാതിലകം</strong> — കലാ-കായിക മത്സരം 2007–08</div></div>
+      <div class="award"><div class="award-text en-text">🥇 First Place — Mapila Pattu (Folklore Songs)</div><div class="award-text ml-text">🥇 ഒന്നാം സ്ഥാനം — മാപ്പിള പാട്ട്</div></div>
+      <div class="award"><div class="award-text en-text">🥇 First Place — Malayalam Recitation</div><div class="award-text ml-text">🥇 ഒന്നാം സ്ഥാനം — മലയാളം ആലാപനം</div></div>
+      <div class="award"><div class="award-text en-text">🥈 Second Place — Patriotic Song & Quiz Competition</div><div class="award-text ml-text">🥈 രണ്ടാം സ്ഥാനം — ദേശഭക്തി ഗാനം & ക്വിസ്</div></div>
+      <div class="award"><div class="award-text en-text">🥈 Second Place — Group Song, Revenue District TTI Kalolsavam 1999</div></div>
+      <div class="award"><div class="award-text en-text">🥉 Third Place — Group Song, Revenue District TTI Kalolsavam 2001</div></div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <div class="section-label en-text">Certifications & Training</div>
+    <div class="section-label ml-text">സർട്ടിഫിക്കറ്റുകളും പരിശീലനവും</div>
+    <div class="certs-row">
+      <div class="cert"><span>✓</span> <span class="en-text">KOOL — IT Online Learning Certificate (KITE 2024)</span><span class="ml-text">KOOL — IT ഓൺലൈൻ സർട്ടിഫിക്കറ്റ്</span></div>
+      <div class="cert"><span>✓</span> <span class="en-text">Child Protection Awareness — British Council UAE (2019)</span></div>
+      <div class="cert"><span>✓</span> <span class="en-text">Continuing Education (English) — HCT Fujairah UAE (2003)</span></div>
+      <div class="cert"><span>✓</span> <span class="en-text">Pre-Senior UN Information Test Certificate</span></div>
+      <div class="cert"><span>✓</span> <span class="en-text">Microsoft Office — Experienced</span></div>
+      <div class="cert"><span>✓</span> <span class="en-text">Valid Indian Driver's Licence</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="wrap">
+  <footer>
+    <div class="footer-name">Vineetha John</div>
+    <div class="footer-copy">NET · SET · KTET · MA · B.Ed · 2026</div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-align:center;width:100%;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">Portfolio by <a href="https://venadglobal.github.io" target="_blank" style="color:var(--gold);text-decoration:none">⚡ Venad Global Consultancy</a></div>
+  </footer>
+</div>
+
+<script>
+function setLang(lang) {
+  if(lang === 'ml') {
+    document.body.classList.add('ml-mode');
+    document.getElementById('btn-ml').classList.add('active');
+    document.getElementById('btn-en').classList.remove('active');
+  } else {
+    document.body.classList.remove('ml-mode');
+    document.getElementById('btn-en').classList.add('active');
+    document.getElementById('btn-ml').classList.remove('active');
+  }
+}
+</script>
+
+</body>
+</html>
